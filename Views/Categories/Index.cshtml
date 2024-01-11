@@ -1,4 +1,7 @@
-﻿@section title {
+﻿@using CookingRecipes.Models
+@model List<Category>
+
+@section title {
     <h3>Kategorije</h3>
 }
 
@@ -11,13 +14,17 @@
         </tr>
     </thead>
     <tbody>
-        <tr>
-            <td>Test</td>
-            <td>Test1</td>
-            <td>
-                <a href="/categories/edit/1">Promjeni</a>
-                <a href="#">Obriši</a>
-            </td>
-        </tr>
+        @foreach(var category in Model)
+        {
+            <tr>
+                <td>@category.Name</td>
+                <td>@category.Description</td>
+                <td>
+                    <a href="/categories/edit/1">Promjeni</a>
+                    <a href="#">Obriši</a>
+                </td>
+            </tr>
+        }
+
     </tbody>
 </table>
