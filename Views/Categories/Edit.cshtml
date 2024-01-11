@@ -1,0 +1,21 @@
+﻿@using CookingRecipes.Models
+@model Category
+
+@section title {
+    <h3>Kategorija: @Model.CategoryId</h3>
+}
+
+
+<form class="col-3">
+    <div class="form-group">
+        <label for="exampleInputEmail1">Naziv kategorije</label>
+        <input type="text" class="form-control" placeholder="Upišite novi naziv">
+    </div>
+    <br />
+    <div class="form-group">
+        <label for="exampleInputPassword1">Opis kategorije</label>
+        <input type="text" class="form-control" placeholder="Dodajte novi opis">
+    </div>
+    <br />
+    <button type="submit" class="btn btn-primary btn-lg">Submit</button>
+</form>
