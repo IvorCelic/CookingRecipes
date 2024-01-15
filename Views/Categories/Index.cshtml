@@ -1,4 +1,6 @@
-﻿@model List<Category>
+﻿@using CookingRecipes.Models
+
+@model List<Category>
 
 @section title {
     <h3>Kategorije</h3>
@@ -26,7 +28,9 @@
                     </td>
                 </tr>
             }
-
         </tbody>
     </table>
+    <div>
+        <a class="btn btn-link" value="add" asp-controller="categories" asp-action="add">Dodaj novu kategoriju</a>
+    </div>
 }

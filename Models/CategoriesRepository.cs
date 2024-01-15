@@ -11,8 +11,8 @@
 
         public static void AddCategory(Category category)
         {
-            var MaxId = _categories.Max(x => x.CategoryId);
-            category.CategoryId = MaxId + 1;
+            var maxId = _categories.Max(x => x.CategoryId);
+            category.CategoryId = maxId + 1;
             _categories.Add(category);
         }
 
